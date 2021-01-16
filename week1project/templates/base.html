@@ -7,9 +7,44 @@
 	<meta name="description" content="Just practising" />
 	<meta name="author" content="Kunhee Ha" />
 
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Bootstrap/css/bootstrap.min.css') }}">
+
+	<!-- My css -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/mycss.css') }}">
+
 	{% block head %}{% endblock %}
 </head>
 <body>
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+	  <div class="container">
+	    <a class="navbar-brand" href="/">Do you like shapes?</a>
+	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+	          <span class="navbar-toggler-icon"></span>
+	        </button>
+	    <div class="collapse navbar-collapse" id="navbarResponsive">
+	      <ul class="navbar-nav ml-auto">
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Because</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">I like</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Shapes</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
 	{% block content %}{% endblock %}
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="{{ url_for('static', filename='jquery/jquery.min.js') }}"></script>
+	<!-- Bootstrap -->
+	<script type="text/javascript" src="{{ url_for('static', filename='Bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+	{% block js %}{% endblock %}
 </body>
 </html>
